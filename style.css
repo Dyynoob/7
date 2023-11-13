@@ -1,0 +1,16 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	color: white;
+	height: 100vh;
+	background: linear-gradient(
+		to right,
+		#5100FF 0%,
+		#5100FF 50%,
+		#5100FF 50%,
+		#5100FF 100%
+	);
+}
