@@ -1,16 +1,415 @@
-*{
-	padding: 0;
-	margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;800&display=swap');
+
+:root {
+    --grad: linear-gradient(107.34deg, #428AF5 4.98%, #9645FE 93.86%);
+    --blue: #428AF5;
+    --purple: #9645FE;
+    --offwhite: #dfdfdf;
+    --offblack: #1b1b1b;
+    --trans-black: #2b2b2bf1;
 }
 
-body{
-	color: white;
-	height: 100vh;
-	background: linear-gradient(
-		to right,
-		#5100FF 0%,
-		#5100FF 50%,
-		#5100FF 50%,
-		#5100FF 100%
-	);
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Jost", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+header {
+    position: absolute;
+    margin: 2.5rem 15%;
+    color: white;
+    width: calc(100vw - 30%);
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    cursor: pointer;
+    width: 8rem;
+}
+
+.header-li {
+    display: inline-block;
+    margin: 0 3.75rem;
+    cursor: pointer;
+}
+
+.header-li-black {
+    color: black;
+}
+
+.header-li a {
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.header-li-black a {
+    transition: all 0.3s ease 0s;
+    color: black;
+}
+
+.header-li a:hover {
+    color: var(--offwhite);
+}
+
+.header-li-black a:hover {
+    color: var(--offblack);
+}
+
+.toggle-button {
+    display: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.toggle-button-black {
+    color: black;
+}
+
+.nav-mobile-slidein {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--trans-black);
+    width: 70vw;
+    height: 100vh;
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+    padding-top: 6.6rem;
+}
+
+.nav-mobile-slidein a {
+    cursor: pointer;
+}
+
+.slidein-exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2.9rem 11.3% 0 0;
+    font-size: 2.5rem;
+}
+
+.nav-mobile-slidein ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+.nav-mobile-slidein li a {
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.nav-mobile-slidein li a:hover {
+    color: #e4e4e4;
+}
+
+/* Main decelerations */
+
+main {
+    font-family: "Jost", sans-serif;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    margin: 15rem 15% 15rem 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Text tags */
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-brands {
+    font-size: 1.75rem;
+    margin: auto;
+}
+
+/* Text effects */
+
+strong { 
+    font-weight: 500;
+}
+
+.underline {
+    text-decoration: underline ;
+}
+
+/* Global elements */
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.7rem;
+    font-family: "Jost", sans-serif;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.circle-btn {
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    width: 3rem;
+    height: 3rem;
+}
+
+btn:visited, btn:hover {
+    text-decoration: none;
+}
+
+.small {
+    font-size: 1.5rem;
+}
+
+.hero .btn {
+    margin: 0 0 5rem 0;
+}
+
+.white-btn {
+    background-color: #ffffff;
+    color: black;
+}
+
+.white-btn:hover {
+    background-color: var(--offwhite);
+    color: var(--offblack);
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+}
+
+.cta-margin {
+    margin-top: 2rem;
+}
+
+.black-btn:hover {
+    background-color: var(--offblack);
+    color: var(--offwhite);
+}
+
+/* Hero */
+
+.hero h1 {
+    margin: 5rem 0 0 0;
+}
+
+.hero h3 {
+    margin: 2rem 0 2rem 0;
+}
+
+.main-heading {
+    margin: 0 0 2rem 0;
+}
+
+
+.hero {
+    margin: auto 0;
+    min-height: 100vh;
+    min-width: 100%;
+    background: var(--grad);
+    color: white;
+}
+
+/* Description section */
+
+.logo-sales {
+    max-width: 15.4rem;
+}
+
+/* Testimonial section */
+
+.testimonial-image {
+    max-width: 12.5rem;
+    border-radius: 50%;
+}
+
+/* Contact section */
+
+#what-are-you-waiting-for a {
+    color: black;
+}
+
+/* Work in progress */
+
+.wip {
+    margin: auto 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wip h3 {
+    margin-top: 2rem;
+}
+
+/* Footer */
+
+footer {
+    padding: 2% 0;
+    display: flex;
+    gap: 10%;
+    align-items: flex-start;
+    justify-content: center;
+    background: var(--grad);
+    color: white;
+}
+
+footer a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--offwhite);
+}
+
+footer .nav-head {
+    text-decoration: underline #428AF5;
+}
+
+footer .footer-btns-flex {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media only screen and (min-width: 64em) { /* Desktop */
+    .flex-wrapper {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .desktop-align-left  {
+        text-align: start;
+    }
+
+    .logo-sales {
+        max-width: 24.4rem;
+    }
+}
+
+@media only screen and (max-width: 64em) {  /* Anything smaller than desktop */
+    .hero h1, .hero h3 {
+        padding: 0 15%;
+    }
+}
+
+@media only screen and (max-width: 81em) { /* nav cutoff point*/
+    header {
+        margin: 2.5rem 7.5%;
+        width: calc(100vw - 15%);
+    }
+
+    .header-li {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 48em) { /* nav mobile view */
+    header {
+        justify-content: space-between;
+    }
+    
+    .nav-button {
+        display: none;
+    }
+
+    .header-li{
+        display: none;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+}
+
+@media only screen and (max-width: 34em) {
+    footer {
+        flex-direction: column;
+        padding: 0 15%;
+    }
+    footer .col {
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 26.5em) { /* Tiny phones */
+    section {
+        margin: 15rem 15% 15rem 15%;
+    }
+    .hero h1, .hero h3 {
+        padding: 0 7.5%;
+    }
 }
