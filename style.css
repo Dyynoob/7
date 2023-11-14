@@ -1,3 +1,4 @@
 .hero {
   background-image: linear-gradient(to right, red , yellow);
+  height: 100vh;
 }
