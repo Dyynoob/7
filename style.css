@@ -89,12 +89,15 @@ nav a {
 }
 
 button.circle {
-	font-size: 3rem;
-	color: white;
-	text-decoration: none;
+	font-size: 1.5rem;
 	background: none;
 	padding: 0.5rem 0.75rem;
-	border-radius: 40px;
-	border: 14px solid white;
+	border-radius: 30px;
+	border: 7px solid white;
 }
-/* spare line */
+
+button.circle a {
+	color: white;
+	text-decoration: none;
+}
+
