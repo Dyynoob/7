@@ -89,10 +89,10 @@ nav a {
 }
 
 button.circle {
-	font-size: 1.5rem;
+	font-size: 3rem;
 	color: white;
 	background: none;
 	padding: 0.5rem 0.75rem;
-	border-radius: 30px;
-	border: 7px solid white;
+	border-radius: 40px;
+	border: 14px solid white;
 }
