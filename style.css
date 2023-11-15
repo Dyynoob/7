@@ -1,14 +1,89 @@
-.hero {
-  background-image: linear-gradient(to right, #30C7FF , #A05DFA);
-  height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;800&display=swap");
 
-
-
-  justify-content: centre;
-  allign-items: centre;
+* {
+	box-sizing: border-box;
+	margin: 0;
 }
 
-.picturespunk {
-  justify-content: centre;
-  allign-items: centre;
+html,
+body {
+	background-image: linear-gradient(to right, #3094ff, #5dfac8);
+	height: 100%;
+	font-family: "Jost", sans-serif;
+	scroll-behavior: smooth;
+	color: white;
+	font-weight: normal;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+/* Nav */
+header {
+	width: 100%;
+	padding: 2rem 4rem;
+
+	background-color: rgba(0, 0, 0, 20%);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-weight: 500;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+header img {
+	height: 7.5rem;
+}
+
+nav {
+	display: flex;
+	gap: 3rem;
+	justify-content: center;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+.pictures {
+	display: flex;
+	flex-direction: column;
+
+	aspect-ratio: 1;
+	width: 400px;
+}
+
+.one {
+	width: 100%;
+	padding: 2rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4rem;
+}
+
+.one h1 {
+	font-weight: 500;
+}
+
+.one h2 {
+	font-weight: normal;
+}
+
+.one p {
+	font-size: 1.5rem;
+}
+
+.one img {
+	/* Inverts color of image to match theme */
+	-webkit-filter: invert(100%);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+
+	width: 20vw;
 }
